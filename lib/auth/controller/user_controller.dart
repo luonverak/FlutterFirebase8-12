@@ -3,7 +3,16 @@ import 'package:firebase8_12/home/view/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
+import '../view/login_screen.dart';
+
 class UserController extends GetxController {
+  RxBool check = true.obs;
+  @override
+  void onInit() {
+    onCheckUser();
+    super.onInit();
+  }
+
   Future createUser(UserModel model) async {
     try {
       final credential =
@@ -45,6 +54,24 @@ class UserController extends GetxController {
         Get.snackbar('Error', 'Something wrong');
       }
     }
+    update();
+  }
+
+  Future logoutAccount() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
+  Future onCheckUser() async {
+    Future.delayed(const Duration(seconds: 2)).then((value) {
+      FirebaseAuth.instance.authStateChanges().listen((User? user) {
+        if (user == null) {
+          Get.offAll(LoginScreen());
+        } else {
+          Get.offAll(HomeScreen());
+        }
+      });
+    });
+    check(true);
     update();
   }
 }

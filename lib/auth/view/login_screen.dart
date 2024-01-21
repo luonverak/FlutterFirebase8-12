@@ -12,6 +12,7 @@ class LoginScreen extends StatelessWidget {
   final email = TextEditingController();
   final password = TextEditingController();
   final userController = Get.put(UserController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,17 +45,30 @@ class LoginScreen extends StatelessWidget {
                   controller: email,
                   hintText: 'Enter your email',
                   prefixIcon: const Icon(Icons.email),
+                  obscureText: false,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                TextFieldWidget(
-                  controller: password,
-                  hintText: 'Enter your password',
-                  prefixIcon: const Icon(Icons.email),
-                  suffixIcon: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.visibility_off),
+                Obx(
+                  () => Visibility(
+                    child: TextFieldWidget(
+                      controller: password,
+                      hintText: 'Enter your password',
+                      prefixIcon: const Icon(Icons.email),
+                      suffixIcon: IconButton(
+                        onPressed: () async {
+                          userController.check.value =
+                              !userController.check.value;
+                        },
+                        icon: Icon(
+                          userController.check.value == true
+                              ? Icons.visibility_off
+                              : Icons.remove_red_eye,
+                        ),
+                      ),
+                      obscureText: userController.check.value,
+                    ),
                   ),
                 ),
                 const SizedBox(

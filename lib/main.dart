@@ -1,4 +1,4 @@
-import 'package:firebase8_12/auth/view/login_screen.dart';
+import 'package:firebase8_12/auth/controller/user_controller.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,7 +16,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: LoadingScreen(),
+    );
+  }
+}
+
+class LoadingScreen extends StatelessWidget {
+  LoadingScreen({super.key});
+  final userController = Get.put(UserController());
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Obx(
+        () => Visibility(
+          visible: userController.check.value,
+          child: const Center(
+            child: CircularProgressIndicator(),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -7,11 +7,13 @@ class TextFieldWidget extends StatelessWidget {
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
+    this.obscureText,
   });
   var controller = TextEditingController();
   var hintText;
   Icon? prefixIcon;
   IconButton? suffixIcon;
+  bool? obscureText = false;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -33,6 +35,7 @@ class TextFieldWidget extends StatelessWidget {
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),
+      obscureText: obscureText!,
     );
   }
 }
