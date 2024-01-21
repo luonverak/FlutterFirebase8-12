@@ -93,9 +93,12 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                SizedBox(
-                  width: 55,
-                  child: Image.asset('asset/icon/search (1).png'),
+                GestureDetector(
+                  onTap: () => userController.signInWithGoogle(),
+                  child: SizedBox(
+                    width: 55,
+                    child: Image.asset('asset/icon/search (1).png'),
+                  ),
                 )
               ],
             ),

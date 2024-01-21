@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>API_KEY</key>
-	<string>AIzaSyCQKCXVEjVJ70ju_S2t0fhnj59V7Z8Vefo</string>
-	<key>GCM_SENDER_ID</key>
-	<string>224893550943</string>
-	<key>PLIST_VERSION</key>
-	<string>1</string>
-	<key>BUNDLE_ID</key>
-	<string>com.example.firebase812</string>
-	<key>PROJECT_ID</key>
-	<string>fir-8-12-ab2da</string>
-	<key>STORAGE_BUCKET</key>
-	<string>fir-8-12-ab2da.appspot.com</string>
-	<key>IS_ADS_ENABLED</key>
-	<false></false>
-	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
-	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
-	<key>IS_GCM_ENABLED</key>
-	<true></true>
-	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
-	<key>GOOGLE_APP_ID</key>
-	<string>1:224893550943:ios:868b0bfc75cc62c7d436ea</string>
-</dict>
+	<dict>
+		<key>CLIENT_ID</key>
+		<string>224893550943-a7i43vv8a595pplnuv62oqa6533ourg1.apps.googleusercontent.com</string>
+		<key>REVERSED_CLIENT_ID</key>
+		<string>com.googleusercontent.apps.224893550943-a7i43vv8a595pplnuv62oqa6533ourg1</string>
+		<key>ANDROID_CLIENT_ID</key>
+		<string>224893550943-s8kgco1le965ljc7p9srd0eup1dkt2um.apps.googleusercontent.com</string>
+		<key>API_KEY</key>
+		<string>AIzaSyCQKCXVEjVJ70ju_S2t0fhnj59V7Z8Vefo</string>
+		<key>GCM_SENDER_ID</key>
+		<string>224893550943</string>
+		<key>PLIST_VERSION</key>
+		<string>1</string>
+		<key>BUNDLE_ID</key>
+		<string>com.example.firebase812</string>
+		<key>PROJECT_ID</key>
+		<string>fir-8-12-ab2da</string>
+		<key>STORAGE_BUCKET</key>
+		<string>fir-8-12-ab2da.appspot.com</string>
+		<key>IS_ADS_ENABLED</key>
+		<false></false>
+		<key>IS_ANALYTICS_ENABLED</key>
+		<false></false>
+		<key>IS_APPINVITE_ENABLED</key>
+		<true></true>
+		<key>IS_GCM_ENABLED</key>
+		<true></true>
+		<key>IS_SIGNIN_ENABLED</key>
+		<true></true>
+		<key>GOOGLE_APP_ID</key>
+		<string>1:224893550943:ios:868b0bfc75cc62c7d436ea</string>
+	</dict>
 </plist>
